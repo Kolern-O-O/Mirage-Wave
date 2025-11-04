@@ -1,0 +1,235 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+select:focus{
+  outline: none;
+}
+
+body{
+  height: 80%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-block {
+  position: absolute;
+  width: 233px;
+  height: 333px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Top-panel {
+    height: 25%;
+    width: 720px;
+    margin: 25px 00px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.Top-left-panel {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Table-scene {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+    height: 200px
+    margin: 0 auto;
+    gap: 5px; /* расстояние между элементами, можно изменить */
+}
+
+.Scene-setting {
+    flex: 0 0 calc(100% / 6 - 5px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 35px; /* пример высоты, можно изменить */
+    background-color: #d0d0d0;
+}
+
+.Scene-setting2 {
+  flex: 0 0 calc(70%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 35px; /* пример высоты, можно изменить */
+  background-color: #d0d0d0;
+}
+
+.Setting-name{
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+}
+.Setting-options {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    font-size: 7px;
+    overflow-y: scroll; /* Прокрутка всегда видна */
+    display: block;
+}
+
+.Option-text{
+    font-size: 6px;
+}
+
+.Top-right-panel {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.Buttons {
+    height: 45%;
+    width: 70%;
+    font-size: 12px;
+}
+
+.Center-panel {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Preview-window {
+    width: 720px;
+    height: 405px;
+    background-color: black;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.Character-panel {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 405px;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    pointer-events: none;
+    z-index: 1;
+}
+
+.Input-text {
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    bottom: 0;
+    z-index: 2;
+}
+
+.Down-panel {
+    height: 25%;
+    width: 720px;
+    margin: 25px 00px;
+    display: flex;
+    justify-content: center;
+}
+
+.Down-left-panel{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.Current-char-window {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    gap: 5px; /* расстояние между элементами, можно изменить */
+}
+
+.Character-operations{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 10px;
+}
+
+.Down-right-panel{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Table-char {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.New_scene_window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+    z-index: 1000;
+
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.scene_name_input {
+    width: 60%;
+    height: 50%;
+    padding: 10px;
+    font-size: 8px;
+    box-sizing: border-box;
+}
+
+.Confirm_button {
+    width: 30%;
+    height: 50%;
+    font-size: 8px;
+    cursor: pointer;
+}

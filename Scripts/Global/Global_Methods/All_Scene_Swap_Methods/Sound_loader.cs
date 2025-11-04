@@ -12,7 +12,7 @@ public class Sound_loader : MonoBehaviour
     }
     public void Play_sound(string ID, string Effect_name, string Effect_priority)
     {
-        if (ID != "")
+        if (ID != "" && ID != "Null")
         {
             StartCoroutine(Effect_priority_check(ID, Effect_name, Effect_priority));
         }

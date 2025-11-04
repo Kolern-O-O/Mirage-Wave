@@ -48,6 +48,9 @@ public class Character_movement_loader : MonoBehaviour
             case "Rush":
                 StartCoroutine(Rush(character, position));
                 break;
+            case "Null":
+                character.transform.position = position;
+                break;
             default:
                 StartCoroutine(Rush(character, position));
                 break;

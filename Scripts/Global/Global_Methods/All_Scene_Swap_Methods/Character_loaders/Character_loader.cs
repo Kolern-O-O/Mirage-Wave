@@ -2,6 +2,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class Character_loader : MonoBehaviour
@@ -17,6 +18,7 @@ public class Character_loader : MonoBehaviour
         GameObject CurrentChar = null;
         for (byte i = 12; i <= 48; i += 12)
         {
+            CurrentChar = null;
             if (Dictionaries.all_scenes[ID][i] == "")
                 break;
             else
@@ -28,9 +30,11 @@ public class Character_loader : MonoBehaviour
                         CurrentChar = character;
                     }
                 }
+                //bool new_char = false;
                 Vector3 coordinates = new Vector2(float.Parse(Dictionaries.all_scenes[ID][i + 3]), float.Parse(Dictionaries.all_scenes[ID][i + 4]));
                 if (CurrentChar == null)
                 {
+                    //new_char = true;
                     CurrentChar = Instantiate(Character_prefab, coordinates, Quaternion.identity, Characters_parent_element);
                     CurrentChar.name = Dictionaries.all_scenes[ID][i];
                     Current_variables.Character_cout++;
@@ -47,14 +51,17 @@ public class Character_loader : MonoBehaviour
                     Object_links.character_image_loader.Change_image(char_img, new_image, Dictionaries.all_scenes[ID][i + 2]);
                 if (!CurrentChar.activeSelf)
                     CurrentChar.SetActive(true);
-                Object_links.character_idle_loader.Idle(CurrentChar, Dictionaries.all_scenes[ID][i + 7]);
+
+                //ƒобавл€л idle анимации как саму идею, времени не хватило, пока доделал сайт, решил отказатьс€ от них, по крайней мере пока не вижу в них смысла, функционально они все еще существуют, но их нужно починить(Ќеправильный пересчет количества анимаций)
+                //if (new_char == true)
+                    //Object_links.character_idle_loader.Idle(CurrentChar, Dictionaries.all_scenes[ID][i + 7]);
 
                 New_Characters[(i - 12) / 12] = CurrentChar;
 
 
             }
         }
-        for (byte i = 0; i < 1; i++)
+        for (byte i = 0; i < 4; i++)
         {
             if (Current_Characters[i] == null)
                 continue;

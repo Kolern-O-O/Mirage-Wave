@@ -10,11 +10,14 @@ public class Character_idle_loader : MonoBehaviour
     };
     public void Idle(GameObject character, string Effect_name)
     {
-        Character Char = character.GetComponent<Character>();
-        if (Char.idle_animation != Effect_name)
+        if (Effect_name != "Null")
         {
-            Char.StartCoroutine(character.GetComponent<Character>().IdleStart(Effect_name));
-            Char.idle_animation = Effect_name;
+            Character Char = character.GetComponent<Character>();
+            if (Char.idle_animation != Effect_name)
+            {
+                Char.StartCoroutine(character.GetComponent<Character>().IdleStart(Effect_name));
+                Char.idle_animation = Effect_name;
+            }
         }
     }
 }

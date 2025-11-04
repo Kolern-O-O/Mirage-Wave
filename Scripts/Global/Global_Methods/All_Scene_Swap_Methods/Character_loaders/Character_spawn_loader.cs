@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class Character_spawn_loader : MonoBehaviour
@@ -48,13 +49,22 @@ public class Character_spawn_loader : MonoBehaviour
             case "Transparence":
                 StartCoroutine(Transparence(character));
                 break;
+            case "Null":
+                Default(character);
+                break;
             default:
-                StartCoroutine(Transparence(character));
+                Default(character);
                 break;
         }
     }
 
-
+    public void Default(GameObject character)
+    {
+        Image char_img = character.GetComponent<Image>();
+        Color color = char_img.color;
+        color.a = 1;
+        char_img.color = color;
+    }
 
     IEnumerator Transparence(GameObject character)
     {

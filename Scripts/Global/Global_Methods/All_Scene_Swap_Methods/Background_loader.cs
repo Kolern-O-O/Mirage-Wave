@@ -28,6 +28,9 @@ public class Background_loader : MonoBehaviour
                 case "Fade":
                     StartCoroutine(Fade(ID));
                     break;
+                case "Null":
+                    background_object.sprite = Resources.Load<Sprite>("Tables/Materials/Backgrounds/" + ID);
+                    Current_variables.Background_swap_phase = 3;
                     break;
                 default:
                     background_object.sprite = Resources.Load<Sprite>("Tables/Materials/Backgrounds/" + ID);

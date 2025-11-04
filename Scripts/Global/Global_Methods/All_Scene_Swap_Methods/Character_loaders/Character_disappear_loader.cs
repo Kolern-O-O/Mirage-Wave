@@ -52,8 +52,13 @@ public class Character_disappear_loader : MonoBehaviour
             case "Transparence":
                 StartCoroutine(Transparence(character));
                 break;
+            case "Null":
+                Destroy(character);
+                Current_variables.Character_cout--;
+                break;
             default:
-                StartCoroutine(Transparence(character));
+                Destroy(character);
+                Current_variables.Character_cout--;
                 break;
         }
     }

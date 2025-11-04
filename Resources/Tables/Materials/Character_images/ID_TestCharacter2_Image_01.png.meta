@@ -116,10 +116,10 @@ TextureImporter:
       name: ID_TestCharacter2_Image_01_0
       rect:
         serializedVersion: 2
-        x: 21
+        x: 15
         y: 17
-        width: 240
-        height: 323
+        width: 166
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

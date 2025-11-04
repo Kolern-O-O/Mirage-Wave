@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/Main.CSS">
+    <title></title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <div class="New_scene_window" id="New_scene_window">
+        <input class="scene_name_input" type="text" id="Name_input"  placeholder="Введите простое название сцены. Прим: MyFirstScene">
+        <button class="Confirm_button" id="Confirm_button" >Confirm</button>
+      </div>
+      <div class="Top-panel">
+        <div class="Top-left-panel">
+          <div class="Table-scene">
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Scene ID
+              </div>
+              <select class="Setting-options" id="Scene ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Next scene ID
+              </div>
+              <select class="Setting-options" id="Next scene ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Background ID
+              </div>
+              <select class="Setting-options" id="Background ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Change bg animation ID
+              </div>
+              <select class="Setting-options" id="Change bg animation ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Text ID
+              </div>
+              <select class="Setting-options" id="Text ID" disabled>
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Change text animation
+              </div>
+              <select class="Setting-options" id="Change text animation">
+
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Text animation priority
+              </div>
+              <select class="Setting-options" id="Text animation priority">
+                <option class="Option-text" value="Before">Before</option>
+                <option class="Option-text" value="Default">Default</option>
+                <option class="Option-text" value="After">After</option>
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Music ID
+              </div>
+              <select class="Setting-options" id="Music ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Change music effect ID
+              </div>
+              <select class="Setting-options" id="Change music effect ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Sound ID
+              </div>
+              <select class="Setting-options" id="Sound ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Change sound effect ID
+              </div>
+              <select class="Setting-options" id="Change sound effect ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Sound effect priority
+              </div>
+              <select class="Setting-options" id="Sound effect priority">
+                <option class="Option-text" value="Before">Before</option>
+                <option class="Option-text" value="Default">Default</option>
+                <option class="Option-text" value="After">After</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="Top-right-panel">
+          <button class="Buttons" type="button" name="Save" id="Save_button">Save all</button>
+          <button class="Buttons" type="button" name="Add" id="Add_button">Add Scene</button>
+          <button class="Buttons" type="button" name="Delete" id="Delete_button">Delete Scene</button>
+        </div>
+      </div>
+      <div class="Center-panel" id="Center-panel">
+        <div class="Preview-window" id="Background-panel">
+          <div class="Character-panel" id="Character-panel">
+
+          </div>
+          <input type="text" class="Input-text" id="Text-panel" value="" placeholder="Введите текст...">
+          </input>
+        </div>
+      </div>
+      <div class="Down-panel">
+        <div class="Down-left-panel">
+          <div class="Current-char-window">
+            <div class="Scene-setting2" id="Current_char"  data-current_char_id="">
+              <div class="Setting-name" id="Current-char-name">
+                Current character
+              </div>
+              <select class="Setting-options" id="Current-characters">
+              </select>
+            </div>
+          </div>
+          <div class="Current-char-window">
+            <button class="Character-operations" type="button" id="Add_char">Add</button>
+            <button class="Character-operations" type="button" id="Delete_char">Delete</button>
+          </div>
+        </div>
+      <div class="Down-right-panel">
+        <div class="Table-char">
+          <div class="Scene-setting">
+            <div class="Setting-name">
+              Character
+            </div>
+              <select class="Setting-options" id="Character">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch image ID
+              </div>
+              <select class="Setting-options" id="Ch image ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch image priority
+              </div>
+              <select class="Setting-options" id="Ch image priority">
+                <option class="Option-text" value="Before">Before</option>
+                <option class="Option-text" value="Default">Default</option>
+                <option class="Option-text" value="After">After</option>
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch coordinate x
+              </div>
+              <input type="text" class="Setting-options" id="Ch coordinate x">
+              </input>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch coordinate y
+              </div>
+              <input type="text" class="Setting-options" id="Ch coordinate y">
+              </input>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch spawn animation ID
+              </div>
+              <select class="Setting-options" id="Ch spawn animation ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch spawn priority
+              </div>
+              <select class="Setting-options" id="Ch spawn priority">
+                <option class="Option-text" value="Before">Before</option>
+                <option class="Option-text" value="Default">Default</option>
+                <option class="Option-text" value="After">After</option>
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch idle animation ID
+              </div>
+              <select class="Setting-options" id="Ch idle animation ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch movement animation ID
+              </div>
+              <select class="Setting-options" id="Ch movement animation ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch movement priority
+              </div>
+              <select class="Setting-options" id="Ch movement priority">
+                <option class="Option-text" value="Before">Before</option>
+                <option class="Option-text" value="Default">Default</option>
+                <option class="Option-text" value="After">After</option>
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch disappear animation ID
+              </div>
+              <select class="Setting-options" id="Ch disappear animation ID">
+              </select>
+            </div>
+            <div class="Scene-setting">
+              <div class="Setting-name">
+                Ch dissapear animation priority
+              </div>
+              <select class="Setting-options" id="Ch dissapear animation priority">
+                <option class="Option-text" value="Before">Before</option>
+                <option class="Option-text" value="Default">Default</option>
+                <option class="Option-text" value="After">After</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="../JS/main.js"></script>
+  </body>
+</html>
